@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sports App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div id="start-screen">
+    <h1>Sports App</h1>
+    <input type="text" id="game-code" placeholder="Enter Game Code">
+    <button onclick="startGame()">Start</button>
+</div>
+
+<div id="game-screen" style="display: none;">
+    <input type="text" id="string1" placeholder="Enter String 1">
+    <input type="text" id="string2" placeholder="Enter String 2">
+    <div id="matchup"></div>
+
+    <table id="games">
+        <button onclick="loadTable()">Display Matchup</button>
+        <tr>
+            <th>Team 1</th>
+            <th>Team 2</th>
+        </tr>
+        <tr>
+            <td>MNC</td>
+            <td>CHE</td>
+        </tr>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
