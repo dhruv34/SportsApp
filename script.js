@@ -7,24 +7,21 @@ function startGame() {
     }
 }
 
-function displayMatchup() {
-    var string1 = document.getElementById("string1").value;
-    var string2 = document.getElementById("string2").value;
-    var matchupElement = document.getElementById("matchup");
-
-    if (string1 && string2) {
-        var matchup = string1 + " vs. " + string2;
-        matchupElement.textContent = matchup;
-    }
-}
-
 function loadTable() {
-    var string1 = document.getElementById("string1").value;
-    var string2 = document.getElementById("string2").value;
     var table = document.getElementById("games");
-    // if (matchupElement.val() != null) {
-    //     matchupElement.append("<tbody></tbody>")
-    // }
-    table.append(string1);
-    table.append(string2);
+    var row= document.createElement("tr")
+    var t1 = document.createElement("td");
+    var t2 = document.createElement("td");
+
+    t1.innerHTML = document.getElementById("team1").value;
+    t2.innerHTML = document.getElementById("team2").value;
+
+    row.appendChild(t1);
+    row.appendChild(t2);
+
+    table.children[0].appendChild(row);
+
+    document.getElementById("team1").reset();
+    document.getElementById("team2").reset();
+
 }
